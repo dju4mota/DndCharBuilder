@@ -49,7 +49,7 @@ export default StyleSheet.create({
     borderRadius: 25,
     backgroundColor: "#dbdbdb",
     flexDirection: "row",
-    alignItems: "flex-end",
+    alignItems: "flex-start",
     justifyContent: "space-between"
   },
   valoresBotao:{
@@ -79,7 +79,17 @@ export default StyleSheet.create({
   dropList:{
     height:260,
   },
-  separar: {
-    
+  indicadorEbotao:{
+    height: 220,
+    justifyContent: 'space-between',
+  },
+  numerosIndicador:{
+    fontSize: 20,
+  },
+  indicador:{
+    alignItems: 'center'
+  },
+  separar:{
+    justifyContent: 'flex-start',
   }
 })

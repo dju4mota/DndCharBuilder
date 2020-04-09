@@ -12,7 +12,7 @@ export default function Dados() {
   }
   
   const valoresFixos = [15,14,13,12,10,8];
-  let [valoresAle,setValoresAle] = useState([0,0,0,0,0,0]);
+  let [valoresAle,setValoresAle] = useState([3,3,3,3,3,3]);
   let [valores,setValores] = useState([0,0,0,0,0,0]);
 
   function gerar(){
@@ -20,7 +20,15 @@ export default function Dados() {
   }
 
   function mostrarValores(){
-    setValoresAle(valoresAle.map(gerar))
+    setValoresAle(valoresAle.map(gerar));
+  }
+
+  function aleatorios(){
+    setValores(valoresAle);
+  }
+
+  function fixos(){
+    setValores(valoresFixos);
   }
 
 
@@ -34,7 +42,9 @@ export default function Dados() {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.valores}>
+      <TouchableOpacity 
+        onPress={fixos}
+        style={styles.valores}>
         <Text  style={styles.valoresTexto}>Valores Fixos:</Text>
         <View style={styles.valoresNumeros}>
           <Text style={styles.valoresNumerosTexto}>{valoresFixos[0]} - </Text>
@@ -46,7 +56,9 @@ export default function Dados() {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.valores}>
+      <TouchableOpacity 
+        onPress={aleatorios}
+        style={styles.valores}>
         <Text style={styles.valoresTexto}>Valores Aleatórios:</Text>
         <View style={styles.botaoNumeros}>
           <View style={styles.valoresNumeros}>
@@ -116,12 +128,23 @@ export default function Dados() {
                         dropdownStyle={styles.dropList}
                         defaultValue={'-'}   />     
         </View>
-      </View>
-        <View style={styles.botaoGerar}>
-          <TouchableOpacity
-            onPress={() => {}}>
-            <Text style={styles.valoresBotao}>Salvar</Text>
-          </TouchableOpacity>
+        </View>
+        <View style={styles.indicadorEbotao}>
+          <View style={styles.indicador}>
+            <Text style={styles.numerosIndicador}>Valores:</Text>
+            <Text style={styles.numerosIndicador}>{valores[0]}</Text>
+            <Text style={styles.numerosIndicador}>{valores[1]}</Text>
+            <Text style={styles.numerosIndicador}>{valores[2]}</Text>
+            <Text style={styles.numerosIndicador}>{valores[3]}</Text>
+            <Text style={styles.numerosIndicador}>{valores[4]}</Text>
+            <Text style={styles.numerosIndicador}>{valores[5]}</Text>
+          </View>
+          <View style={styles.botaoGerar}>
+            <TouchableOpacity
+              onPress={() => {}}>
+              <Text style={styles.valoresBotao}>Salvar</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>

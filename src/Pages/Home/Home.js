@@ -1,28 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import {useNavigation} from '@react-navigation/native'
-
+import Gstyles from  '../../GlobalStyles.js'
 
 export default function Home() {
   const navigation = useNavigation();
 
   function navigateToAtributos(){
-    navigation.navigate('Atributos');
+    navigation.navigate('Dados');
 }
 
   return (
-    <View style={styles.container}>
-      <Text>Home!</Text>
+    <View style={Gstyles.container}>
+      <Text style={Gstyles.font20W}>Home!</Text>
       <Button title='Atributos'onPress={navigateToAtributos}/>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+

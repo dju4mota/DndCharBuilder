@@ -3,23 +3,6 @@ import Constants from 'expo-constants'
 
 
 export default StyleSheet.create({
-  container:{
-    flex:1,
-    paddingHorizontal: 24,
-    paddingTop: Constants.statusBarHeight + 20,
-  },
-  header:{
-    flexDirection : 'row',
-    justifyContent: 'space-between',
-    paddingBottom: 40,
-    alignItems: 'center',
-  },
-  headerText:{
-    fontSize:30,
-  },
-  hedaerBotao:{
-
-  },
   valores:{
     marginTop: 20,
     paddingVertical: 15,
@@ -28,10 +11,6 @@ export default StyleSheet.create({
     borderColor: "#000",
     borderRadius: 25,
     backgroundColor: "#dbdbdb",
-    
-  },
-  valoresTexto:{
-    fontSize:30,
   },
   valoresNumerosTexto:{
     fontSize:24,
@@ -52,25 +31,18 @@ export default StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "space-between"
   },
-  valoresBotao:{
-    fontSize: 20,
-    color: '#E3E3E3'
-  },
   botaoGerar:{
     borderWidth: 2,
     borderColor: "#000",
     paddingHorizontal: 5,
     paddingVertical:2,
     borderRadius: 15,
-    backgroundColor: "#CC4A4A",
+    backgroundColor: "#e30000",
+    alignItems: "center",
   },
   botaoNumeros:{
     justifyContent: 'space-between',
     flexDirection :'row',
-  },
-  dropText:{
-    fontSize: 20,
-
   },
   dropdownText:{
     fontSize: 20,
@@ -83,13 +55,19 @@ export default StyleSheet.create({
     height: 220,
     justifyContent: 'space-between',
   },
-  numerosIndicador:{
-    fontSize: 20,
-  },
   indicador:{
     alignItems: 'center'
   },
   separar:{
     justifyContent: 'flex-start',
+  },
+  texto:{
+    fontSize: 20,
+    color:'#fff',
+    paddingTop: 0,
+    paddingBottom: 25,
+  },
+  body:{
+    justifyContent: 'space-around',
   }
 })

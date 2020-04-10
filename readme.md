@@ -4,7 +4,7 @@
 
 ### The first feature is an atribute generator: 
 <div justify-content='space-around'>
-<img src= './ScreenShoots/atributos.jpg' width= '35%' float="right"/>
-<img src= './ScreenShoots/atributos2.jpg' width= '35%' float="right"/>
-<img src= './ScreenShoots/atributos3.jpg' width= '35%' float="right"/>
+<img src= './ScreenShoots/atributos.jpg' width= '30%' float="right"/>
+<img src= './ScreenShoots/atributos2.jpg' width= '30%' float="right"/>
+<img src= './ScreenShoots/atributos3.jpg' width= '30%' float="right"/>
 </div>

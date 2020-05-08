@@ -1,0 +1,67 @@
+<View style={styles.valoresEscolha}>
+        <View style={styles.separar}>
+        <View style={styles.valoresNumeros}>
+          <Text style={styles.valoresNumerosTexto}>Força:   </Text> 
+          <ModalDropdown options={valores}
+                        textStyle={Gstyles.font20}
+                        dropdownTextStyle={styles.dropdownText}
+                        dropdownStyle={styles.dropList}
+                        defaultValue={'-'}   />                    
+        </View>
+        <View style={styles.valoresNumeros}>
+          <Text style={styles.valoresNumerosTexto}>Destreza:  </Text> 
+          <ModalDropdown options={valores}
+                        textStyle={Gstyles.font20}
+                        dropdownTextStyle={styles.dropdownText}
+                        dropdownStyle={styles.dropList}
+                        defaultValue={'-'}   />                     
+        </View>
+        <View style={styles.valoresNumeros}>
+          <Text style={styles.valoresNumerosTexto}>Constituição:  </Text> 
+          <ModalDropdown options={valores}
+                        textStyle={Gstyles.font20}
+                        dropdownTextStyle={styles.dropdownText}
+                        dropdownStyle={styles.dropList} 
+                        defaultValue={'-'}   />                       
+        </View>
+        <View style={styles.valoresNumeros}>
+          <Text style={styles.valoresNumerosTexto}>Inteligência:  </Text> 
+          <ModalDropdown options={valores}
+                        textStyle={Gstyles.font20}
+                        dropdownTextStyle={styles.dropdownText}
+                        dropdownStyle={styles.dropList} 
+                        defaultValue={'-'}   />                       
+        </View>
+        <View style={styles.valoresNumeros}>
+          <Text style={styles.valoresNumerosTexto}>Sabedoria:  </Text> 
+          <ModalDropdown options={valores}
+                        textStyle={Gstyles.font20}
+                        dropdownTextStyle={styles.dropdownText}
+                        dropdownStyle={styles.dropList} 
+                        defaultValue={'-'}   />                        
+        </View>
+        <View style={styles.valoresNumeros}>
+          <Text style={styles.valoresNumerosTexto}>Carisma:  </Text> 
+          <ModalDropdown options={valores}
+                        textStyle={Gstyles.font20}
+                        dropdownTextStyle={styles.dropdownText}
+                        dropdownStyle={styles.dropList}
+                        defaultValue={'-'}   />     
+        </View>
+        </View>
+        <View style={styles.indicadorEbotao}>
+          <View style={styles.indicador}>
+            <Text style={Gstyles.font20}>Valores:</Text>
+            <Text style={Gstyles.font20}>{valores[0]}</Text>
+            <Text style={Gstyles.font20}>{valores[1]}</Text>
+            <Text style={Gstyles.font20}>{valores[2]}</Text>
+            <Text style={Gstyles.font20}>{valores[3]}</Text>
+            <Text style={Gstyles.font20}>{valores[4]}</Text>
+            <Text style={Gstyles.font20}>{valores[5]}</Text>
+          </View>
+          <TouchableOpacity style={styles.botaoGerar}
+            onPress={() => {}}>
+            <Text style={styles.Gfont20}>Salvar</Text>
+          </TouchableOpacity>
+        </View>
+      </Vie

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, TouchableHighlight, ScrollView } from 'react-native';
 import {useNavigation} from '@react-navigation/native'
 import Gstyles from  '../../GlobalStyles.js'
 
@@ -12,8 +12,16 @@ export default function Home() {
 
   return (
     <View style={Gstyles.container}>
-      <Text style={Gstyles.font20W}>Home!</Text>
-      <Button title='Atributos'onPress={navigateToAtributos}/>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        
+        <Text style={Gstyles.font20W}>Home!</Text>
+        <TouchableHighlight onPress={navigateToAtributos}>
+          <Text>Atributos</Text>  
+        </TouchableHighlight>
+
+
+
+      </ScrollView>
     </View>
   );
 }

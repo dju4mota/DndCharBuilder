@@ -13,9 +13,11 @@ export default function Dados() {
     navigation.navigate('Home');
 }
   
+  /**/ 
   const valoresFixos = [15,14,13,12,10,8];
   let [valoresAle,setValoresAle] = useState([7,7,7,7,7,7]);
   let [valores,setValores] = useState([0,0,0,0,0,0]);
+  let [valoresFinais,setValoresFinais] = useState([0,0,0,0,0,0]);
 
   function gerar(){
     return 7 + Math.floor(11 * Math.random());
@@ -32,6 +34,32 @@ export default function Dados() {
   function fixos(){
     setValores(valoresFixos);
   }
+
+  /*  */ 
+  function attForca (i,valor) {
+    setValoresFinais(valoresFinais.map((numero, j)=> 0===j ? valor : numero))
+  }
+  function attDes (i,valor) {
+    setValoresFinais(valoresFinais.map((numero, j)=> 1===j ? valor : numero))
+  }
+  function attCons (i,valor) {
+    setValoresFinais(valoresFinais.map((numero, j)=> 2===j ? valor : numero))
+  }
+  function attInt (i,valor) {
+    setValoresFinais(valoresFinais.map((numero, j)=> 3===j ? valor : numero))
+  }
+  function attSab (i,valor) {
+    setValoresFinais(valoresFinais.map((numero, j)=> 4===j ? valor : numero))
+  }
+  function attCar (i,valor) {
+    setValoresFinais(valoresFinais.map((numero, j)=> 5===j ? valor : numero))
+  }
+
+
+  function salvar() {
+    alert(valoresFinais);
+  }
+
 
 
   return (
@@ -93,7 +121,6 @@ export default function Dados() {
           </View>
         </View>
       </TouchableOpacity>
-
       <View style={styles.valoresEscolha}>
         <View style={styles.separar}>
         <View style={styles.valoresNumeros}>
@@ -102,7 +129,10 @@ export default function Dados() {
                         textStyle={Gstyles.font20}
                         dropdownTextStyle={styles.dropdownText}
                         dropdownStyle={styles.dropList}
-                        defaultValue={'-'}   />                    
+                        defaultValue={'-'}   
+                        onSelect={attForca}
+                        />    
+                                        
         </View>
         <View style={styles.valoresNumeros}>
           <Text style={styles.valoresNumerosTexto}>Destreza:  </Text> 
@@ -110,7 +140,8 @@ export default function Dados() {
                         textStyle={Gstyles.font20}
                         dropdownTextStyle={styles.dropdownText}
                         dropdownStyle={styles.dropList}
-                        defaultValue={'-'}   />                     
+                        defaultValue={'-'}   
+                        onSelect={attDes}/>                     
         </View>
         <View style={styles.valoresNumeros}>
           <Text style={styles.valoresNumerosTexto}>Constituição:  </Text> 
@@ -118,7 +149,8 @@ export default function Dados() {
                         textStyle={Gstyles.font20}
                         dropdownTextStyle={styles.dropdownText}
                         dropdownStyle={styles.dropList} 
-                        defaultValue={'-'}   />                       
+                        defaultValue={'-'}  
+                        onSelect={attCons} />                       
         </View>
         <View style={styles.valoresNumeros}>
           <Text style={styles.valoresNumerosTexto}>Inteligência:  </Text> 
@@ -126,7 +158,8 @@ export default function Dados() {
                         textStyle={Gstyles.font20}
                         dropdownTextStyle={styles.dropdownText}
                         dropdownStyle={styles.dropList} 
-                        defaultValue={'-'}   />                       
+                        defaultValue={'-'}   
+                        onSelect={attInt}/>                       
         </View>
         <View style={styles.valoresNumeros}>
           <Text style={styles.valoresNumerosTexto}>Sabedoria:  </Text> 
@@ -134,7 +167,8 @@ export default function Dados() {
                         textStyle={Gstyles.font20}
                         dropdownTextStyle={styles.dropdownText}
                         dropdownStyle={styles.dropList} 
-                        defaultValue={'-'}   />                        
+                        defaultValue={'-'}   
+                        onSelect={attSab}/>                        
         </View>
         <View style={styles.valoresNumeros}>
           <Text style={styles.valoresNumerosTexto}>Carisma:  </Text> 
@@ -142,7 +176,8 @@ export default function Dados() {
                         textStyle={Gstyles.font20}
                         dropdownTextStyle={styles.dropdownText}
                         dropdownStyle={styles.dropList}
-                        defaultValue={'-'}   />     
+                        defaultValue={'-'}   
+                        onSelect={attCar}/>     
         </View>
         </View>
         <View style={styles.indicadorEbotao}>
@@ -156,7 +191,7 @@ export default function Dados() {
             <Text style={Gstyles.font20}>{valores[5]}</Text>
           </View>
           <TouchableOpacity style={styles.botaoGerar}
-            onPress={() => {}}>
+            onPress={salvar}>
             <Text style={styles.Gfont20}>Salvar</Text>
           </TouchableOpacity>
         </View>

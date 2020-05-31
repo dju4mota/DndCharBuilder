@@ -34,8 +34,14 @@ module.exports = {
       level, 
       attributes
     })
-    
+
     return response.json({id,name, level});
+  },
+ async delete(request,response){
+  const {id} = request.params;
+  await connection('characters').where('id', id).delete()
+    
+    return response.send(200);
   },
 
 }
